@@ -1,0 +1,42 @@
+﻿<Window x:Class="DataBaseAppllication.WPF_DataBaseApp"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:DataBaseAppllication"
+        mc:Ignorable="d"
+        Title="WPF_DataBaseApp" Height="960" Width="800" HorizontalAlignment="Center" Grid.IsSharedSizeScope="True">
+    <Grid Width="800" HorizontalAlignment="Center" Margin="0,0,0,0" Height="922" UseLayoutRounding="True" ClipToBounds="True">
+        <Grid.Background>
+            <ImageBrush ImageSource="/tlo.jpg" Stretch="UniformToFill"/>
+        </Grid.Background>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="173*"/>
+            <ColumnDefinition Width="459*"/>
+            <ColumnDefinition Width="168*"/>
+        </Grid.ColumnDefinitions>
+        <DataGrid x:Name="CarpartsGrid" Margin="337,55,0,0" VerticalAlignment="Top" d:ItemsSource="{d:SampleData ItemCount=5}" SelectionChanged="CarpartsGrid_SelectionChanged" Grid.ColumnSpan="2" HorizontalAlignment="Left" Background="White" BorderBrush="Black" Width="251" Height="649" Grid.Column="1"/>
+        <Label Content="Name" HorizontalAlignment="Left" Height="30" Margin="70,341,0,0" VerticalAlignment="Top" Width="100" FontFamily="Cascadia Code" FontSize="20"/>
+        <TextBox x:Name="txtName" HorizontalAlignment="Left" Height="30" Margin="81,341,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="194" FontFamily="Cascadia Code" FontSize="20" Grid.Column="1"/>
+        <Label Content="Manufacturer" HorizontalAlignment="Left" Height="30" Margin="70,394,0,0" VerticalAlignment="Top" Width="157" FontFamily="Cascadia Code" FontSize="20" Grid.ColumnSpan="2"/>
+        <TextBox x:Name="txtManufacturer" HorizontalAlignment="Left" Height="30" Margin="81,394,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="194" FontFamily="Cascadia Code" FontSize="20" Grid.Column="1"/>
+        <Label Content="Index" HorizontalAlignment="Left" Height="30" Margin="70,439,0,0" VerticalAlignment="Top" Width="100" FontFamily="Cascadia Code" FontSize="20"/>
+        <TextBox x:Name="txtIndex" HorizontalAlignment="Left" Height="30" Margin="81,439,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="194" FontFamily="Cascadia Code" FontSize="20" Grid.Column="1"/>
+        <Button x:Name="btnadd" Content="ADD" FontFamily="Cascadia Code" FontSize="20" HorizontalAlignment="Left" Margin="70,514,0,0" VerticalAlignment="Top" Height="36" Width="378" Click="btnadd_Click" Grid.ColumnSpan="2"/>
+        <Button x:Name="btnLoadParts" Content="Load Parts" FontFamily="Cascadia Code" FontSize="20" HorizontalAlignment="Left" Margin="62,221,0,0" VerticalAlignment="Top" Height="32" Width="408" Click="btnLoadParts_Click" Grid.ColumnSpan="2"/>
+        <Button x:Name="btnUpdateParts" Content="Update Parts" FontFamily="Cascadia Code" FontSize="20" HorizontalAlignment="Left" Margin="70,801,0,0" VerticalAlignment="Top" Height="32" Width="378" Click="btnUpdateParts_Click" Grid.ColumnSpan="2"/>
+        <Label Content="Name" HorizontalAlignment="Left" Height="30" Margin="50,636,0,0" VerticalAlignment="Top" Width="108" FontFamily="Cascadia Code" FontSize="20"/>
+        <TextBox x:Name="txtName2" HorizontalAlignment="Left" Height="30" Margin="67,636,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="212" FontFamily="Cascadia Code" FontSize="20" Grid.Column="1"/>
+        <Label Content="Manufacturer" HorizontalAlignment="Left" Height="31" Margin="50,689,0,0" VerticalAlignment="Top" Width="150" FontFamily="Cascadia Code" FontSize="20" Grid.ColumnSpan="2"/>
+        <TextBox x:Name="txtManufacturer2" HorizontalAlignment="Left" Height="31" Margin="67,689,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="212" FontFamily="Cascadia Code" FontSize="20" Grid.Column="1"/>
+        <Label Content="Index" HorizontalAlignment="Left" Height="30" Margin="50,745,0,0" VerticalAlignment="Top" Width="108" FontFamily="Cascadia Code" FontSize="20"/>
+        <TextBox x:Name="txtIndex2" HorizontalAlignment="Left" Height="30" Margin="67,745,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="212" FontFamily="Cascadia Code" FontSize="20" Grid.Column="1"/>
+        <Button x:Name="btnDeleteParts" Content="Delete Parts" FontFamily="Cascadia Code" FontSize="20" HorizontalAlignment="Left" Margin="337,722,0,0" VerticalAlignment="Top" Height="32" Width="251" Click="btnDeleteParts_Click" Grid.ColumnSpan="2" Grid.Column="1"/>
+        <Label Content="1. Load Parts" HorizontalAlignment="Left" Height="32" Margin="135,134,0,0" VerticalAlignment="Top" Width="265" Background="White" FontSize="16" Grid.ColumnSpan="2"/>
+        <Label Content="2. Reload Parts after every change" HorizontalAlignment="Left" Height="31" Margin="135,166,0,0" VerticalAlignment="Top" Width="265" Background="White" FontSize="16" Grid.ColumnSpan="2"/>
+        <Label Content="Car Parts Data Base" HorizontalAlignment="Left" Height="54" Margin="10,32,0,0" VerticalAlignment="Top" Width="481" FontFamily="Cascadia Code" FontSize="40" Background="#FFF9F9F9" Grid.ColumnSpan="2"/>
+        <Label Content="Here you can add new Parts" HorizontalAlignment="Left" Height="37" Margin="104,279,0,0" VerticalAlignment="Top" Width="324" FontFamily="Cascadia Code" FontSize="20" Grid.ColumnSpan="2"/>
+        <Label Content="Here you can modify Parts" HorizontalAlignment="Left" Height="37" Margin="97,558,0,0" VerticalAlignment="Top" Width="324" FontFamily="Cascadia Code" FontSize="20" Grid.ColumnSpan="2"/>
+
+    </Grid>
+</Window>
